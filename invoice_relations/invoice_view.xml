@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+	<record id="linked_cust_invoice_form" model="ir.ui.view">
+		<field name="name">account.invoice.form.linked customer</field>
+		<field name="model">account.invoice</field>		
+		<field name="inherit_id" ref="account.invoice_form" />
+		<field name="arch" type="xml">
+			<page string="Payments" position="after">
+			  <page string="Linked Invoices" >
+				 <field name="link_invoice_ids" >   <!-- set group acces-->
+                    <tree editable="top">                        
+                        <field name="name" string="Type"/>
+                        <field name="derived_inv_id"/>
+                        <field name="derived_inv_date"/>                        
+                        <field name="derived_inv_total"/>
+                    </tree>
+                </field>
+              </page>
+			</page>		                        
+		</field>
+	</record>
+
+	<record id="linked_supp_invoice_form" model="ir.ui.view">
+		<field name="name">account.invoice.form.linked supplier</field>
+		<field name="model">account.invoice</field>		
+		<field name="inherit_id" ref="account.invoice_supplier_form" />
+		<field name="arch" type="xml">
+			<page string="Payments" position="after">
+			  <page string="Linked Invoices" >
+				 <field name="link_invoice_ids" >   <!-- set group acces-->
+                    <tree editable="top">                        
+                        <field name="name" string="Type"/>
+                        <field name="derived_inv_id"/>
+                        <field name="derived_inv_date"/>                        
+                        <field name="derived_inv_total"/>
+                    </tree>
+                </field>
+              </page>
+			</page>		                        
+		</field>
+	</record>
+                
+	</data>
+</openerp>
