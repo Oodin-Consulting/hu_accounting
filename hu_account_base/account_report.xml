@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- QWeb Reports -->       
+
+		<record id="account.account_invoices" model="ir.actions.report.xml">
+			<field name="attachment_use" eval="False" />
+            <field name="paperformat_id" ref="report.paperformat_euro_inv"/>
+        </record>
+
+    </data>
+</openerp>

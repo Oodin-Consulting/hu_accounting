@@ -1,0 +1,8 @@
+"id","name","chart_template_id/id"
+"fp_eva","EVA-s Szállító","hu_chart_template"
+"fp_euszolg","EU-s Szolgáltatás","hu_chart_template"
+"fp_alanyi","Alanyi - tárgyi mentes","hu_chart_template"
+"fp_norm","Normál Partner","hu_chart_template"
+"fp_eus","EU-s Termék","hu_chart_template"
+"fp_nemeuterm","Import/Export termék (Nem-EU) - Önadózó ","hu_chart_template"
+"fp_nemeuszolg","Import/Export szolgáltatás (nem-EU)","hu_chart_template"

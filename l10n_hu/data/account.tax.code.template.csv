@@ -1,0 +1,110 @@
+id,code,name,sign,notprintable,info,parent_id/id
+0- ADOGYUJTOK,0. ADOGYUJTOK,Your Company,1.0,0,,
+I AFA,I AFA,I. ÁFA-k,1.0,0,,0- ADOGYUJTOK
+II AA,II AA,II. Adó Alap,1.0,0,,0- ADOGYUJTOK
+1-,1.,Fizetendő ÁFA,1.0,0,,I AFA
+2-,2.,Levonható ÁFA,-1.0,0,,I AFA
+3-,3.,Fizetendő Adó Alap,1.0,0,,II AA
+4-,4.,Levonható Adó Alap,-1.0,0,,II AA
+1-a,1.a,Belföldi fizetendő ÁFA,1.0,0,,1-
+1-b,1.b,EU-s fizetendő ÁFA,1.0,0,,1-
+1-c,1.c,3ik országbeli fizetendő ÁFA,1.0,0,,1-
+2-a,2.a,Belföldi levonható ÁFA,1.0,0,,2-
+2-b,2.b,EU-s levonható ÁFA,1.0,0,,2-
+2-c,2.c,3ik országbeli levonható ÁFA,1.0,0,,2-
+3-a,3.a,Belföldi fizetendő Adó Alap,1.0,0,,3-
+3-b,3.b,EU-s fizetendő Adó Alap,1.0,0,,3-
+3-c,3.c,3ik országbeli fizetendő Adó Alap,1.0,0,,3-
+4-a,4.a,Belföldi levonható Adó Alap,1.0,0,,4-
+4-b,4.b,EU-s levonható Adó Alap,1.0,0,,4-
+4-c,4.c,3ik országbeli levonható Adó Alap,1.0,0,,4-
+ado-18F-ELO-S06,ado-18F-ELO-S06,Adó ÁFA 18% Fizetendő Előleg - S45,1.0,0,,1-a
+ado-18F-EU-T-S13,ado-18F-EU-T-S13,Adó ÁFA 18% F. EU Termék,1.0,0,,1-b
+ado-18F-IMP-T-ONA-S25,ado-18F-IMP-T-ONA-S25,Adó ÁFA 18% F. termék import (önadozó),1.0,0,,1-c
+ado-18F-S06,ado-18F-S06,Adó ÁFA 18% Fizetendő,1.0,0,,1-a
+ado-18L-ARANY-S68,ado-18L-ARANY-S68,Adó ÁFA 18 % levonható (arányosítás),1.0,0,,2-a
+ado-18L-EU-T-S69,ado-18L-EU-T-S69,Adó ÁFA 18% L. EU-s Termék,1.0,0,,2-b
+ado-18L-IMP-T-KIV-S70,ado-18L-IMP-T-KIV-S70,Adó ÁFA 18% L. Import termék (Nem-EU) kivetett,1.0,0,,2-c
+ado-18L-IMP-T-ONA-S71,ado-18L-IMP-T-ONA-S71,Adó ÁFA 18% L. termék import (önadózó),1.0,0,,2-c
+ado-18L-S65,ado-18L-S65,Adó ÁFA 18% Levonható,1.0,0,,2-a
+ado-27F-ELO-S07,ado-27F-ELO-S07,Adó ÁFA 27% Fizetendő Előleg - S45,1.0,0,,1-a
+ado-27F-EU-SZ-S18,ado-27F-EU-SZ-S18,Adó ÁFA 27% F. Import Szolgáltatás (EU-s),1.0,0,,1-b
+ado-27F-EU-T-S14,ado-27F-EU-T-S14,Adó ÁFA 27% F. EU Termék,1.0,0,,1-b
+ado-27F-FORDHUL-S29,ado-27F-FORDHUL-S29,Adó ÁFA 27% F. Fordított Hulladék - S52,1.0,0,,1-a
+ado-27F-FORDING-S29,ado-27F-FORDING-S29,Adó ÁFA 27% F. Fordított Ingatlan - S51,1.0,0,,1-a
+ado-27F-FORDSZOLG-S29,ado-27F-FORDSZOLG-S29,Adó ÁFA 27% F. Fordított Szolgáltatás -S54,1.0,0,,1-a
+ado-27F-IMP-SZ-S27,ado-27F-IMP-SZ-S27,Adó ÁFA 27% F. Import Szolgáltatás (nem EU-s),1.0,0,,1-c
+ado-27F-IMP-T-ONA-S26,ado-27F-IMP-T-ONA-S26,Adó ÁFA 27% F. termék import (önadozó),1.0,0,,1-c
+ado-27F-S07,ado-27F-S07,Adó ÁFA 27% Fizetendő,1.0,0,,1-a
+ado-27L-EU-SZ-S67,ado-27L-EU-SZ-S67,Adó ÁFA 27% L. Import Szolgáltatás (EU-s),1.0,0,,2-b
+ado-27L-EU-T-S69,ado-27L-EU-T-S69,Adó ÁFA 27% L. EU-s Termék,1.0,0,,2-b
+ado-27L-TE-S66,ado-27L-TE-S66-[S77],Adó ÁFA 27% Levonható TE - S77,1.0,0,,2-a
+ado-27L-EVA-S66,ado-27L-EVA-S66 - [S80],Adó ÁFA 27% Levonható EVA - S80,1.0,0,,2-a
+ado-27L-FORDHUL-S66,ado-27L-FORDHUL-S66,Adó ÁFA 27% Levonható Fordított Hulladék,1.0,0,,2-a
+ado-27L-FORDING-S66,ado-27L-FORDING-S66,Adó ÁFA 27% Levonható Fordított Ingatlan,1.0,0,,2-a
+ado-27L-FORDSZOLG-S66,ado-27L-FORDSZOLG-S66,Adó ÁFA 27% Levonható Fordított Szolgáltatás,1.0,0,,2-a
+ado-27L-IMP-SZ-S67,ado-27L-IMP-SZ-S67,Adó ÁFA 27% L. Import Szolgáltatás (nem EU-s),1.0,0,,2-c
+ado-27L-IMP-T-KIV-S70,ado-27L-IMP-T-KIV-S70,Adó ÁFA 27% L. Import termék (Nem-EU) kivetett,1.0,0,,2-c
+ado-27L-IMP-T-ONA-S71,ado-27L-IMP-T-ONA-S71,Adó ÁFA 27 % L. termék import (önadózó),1.0,0,,2-c
+ado-27L-S66,ado-27L-S66,Adó ÁFA 27% Levonható,1.0,0,,2-a
+ado-27L-ARANY-S68,ado-27L-ARANY-S68,Adó ÁFA 27% Levonható (arányosítás),1.0,0,,2-a
+ado-5F-ELO-S05,ado-5F-ELO-S05,Adó ÁFA 5% Fizetendő Előleg - S45,1.0,0,,1-a
+ado-5F-EU-T-S12,ado-5F-EU-T-S12,Adó ÁFA 5% F. EU Termék,1.0,0,,1-b
+ado-5F-IMP-T-ONA-S24,ado-5F-IMP-T-ONA-S24,Adó ÁFA 5% F. termék import (önadozó),1.0,0,,1-c
+ado-5F-S05,ado-5F-S05,Adó ÁFA 5% Fizetendő,1.0,0,,1-a
+ado-5L-ARANY-S68,ado-5L-ARANY-S68,Adó ÁFA 5 % levonható (arányosítás),1.0,0,,2-a
+ado-5L-EU-T-S69,ado-5L-EU-T-S69,Adó ÁFA 5% L. EU-s Termék,1.0,0,,2-b
+ado-5L-IMP-T-KIV-S70,ado-5L-IMP-T-KIV-S70,Adó ÁFA 5% L. Import termék (Nem-EU) kivetett ,1.0,0,,2-c
+ado-5L-IMP-T-ONA-S71,ado-5L-IMP-T-ONA-S71,Adó ÁFA 5% L. termék import (önadózó),1.0,0,,2-c
+ado-5L-S64,ado-5L-S64,Adó ÁFA 5% Levonható,1.0,0,,2-a
+alap-0F-EU-EXP-SZ-ELO-S91,alap-0F-EU-EXP-SZ-ELO-S91,AdóAlap ÁFA 0% F. Export szolgáltatás előleg (EU),1.0,0,,3-b
+alap-0F-EU-EXP-SZ-ELO-S92,alap-0F-EU-EXP-SZ-ELO-S92,AdóAlap ÁFA 0% F. 92 Export szolgáltatás előleg (EU),1.0,0,,3-b
+alap-0F-EU-EXP-SZ-S91,alap-0F-EU-EXP-SZ-S91,AdóAlap ÁFA 0% F. Export Szolgáltatás (EU),1.0,0,,3-b
+alap-0F-EU-EXP-SZ-S92,alap-0F-EU-EXP-SZ-S92,AdóAlap ÁFA 0% F. 92 Export Szolgáltatás (EU),1.0,0,,3-b
+alap-0F-EU-T-ELO-S02,alap-0F-EU-T-ELO-S02,AdóAlap ÁFA 0% F. EU Termék Előleg,1.0,0,,3-b
+alap-0F-EU-T-S02,alap-0F-EU-T-S02,AdóAlap ÁFA 0% F. EU Termék,1.0,0,,3-b
+alap-0F-EXP-SZ-ELO-S93,alap-0F-EXP-SZ-ELO-S93,AdóAlap ÁFA 0% F. Export Szolgáltatás (Nem-EU) Előleg,1.0,0,,3-b
+alap-0F-EXP-SZ-S93,alap-0F-EXP-SZ-S93,AdóAlap ÁFA 0% F. Export Szolgáltatás (Nem-EU),1.0,0,,3-b
+alap-0F-EXP-T-ELO-S01,alap-0F-EXP-T-ELO-S01,AdóAlap ÁFA 0% F. Export Termék (Nem-EU) Előleg - S46,1.0,0,,3-c
+alap-0F-EXP-T-S01,alap-0F-EXP-T-S01,AdóAlap ÁFA 0% F. Export Termék (Nem-EU),1.0,0,,3-c
+alap-0F-TAM-S04,alap-0F-TAM-S04,AdóAlap ÁFA 0% F. Belföldi adómentes,1.0,0,,3-a
+alap-0L-MABB-S63,alap-0L-MABB-S63,AdóAlap ÁFA 0% Mentes Adómentes belföldi beszerzés,1.0,0,,4-a
+alap-18F-ELO-S06,alap-18F-ELO-S06,AdóAlap ÁFA 18% Fizetendő Előleg - S45,1.0,0,,3-a
+alap-18F-EU-T-S13,alap-18F-EU-T-S13,AdóAlap ÁFA 18% F. EU Termék,1.0,0,,3-b
+alap-18F-IMP-T-ONA-S25,alap-18F-IMP-T-ONA-S25,AdóAlap ÁFA 18% F. termék import (önadozó),1.0,0,,3-c
+alap-18F-S06,alap-18F-S06,AdóAlap ÁFA 18% Fizetendő,1.0,0,,3-a
+alap-18L-ARANY-S68,alap-18L-ARANY-S68,AdóAlap ÁFA 18 % levonható (arányosítás),1.0,0,,4-a
+alap-18L-EU-T-S69,alap-18L-EU-T-S69,AdóAlap ÁFA 18% L. EU-s Termék,1.0,0,,4-b
+alap-18L-IMP-T-KIV-S70,alap-18L-IMP-T-KIV-S70,AdóAlap ÁFA 18% L. Import termék (Nem-EU) kivetett,1.0,0,,4-c
+alap-18L-IMP-T-ONA-S71,alap-18L-IMP-T-ONA-S71,AdóAlap ÁFA 18% L. termék import (önadózó),1.0,0,,4-c
+alap-18L-S65,alap-18L-S65,AdóAlap ÁFA 18% Levonható,1.0,0,,4-a
+alap-27F-ELO-S07,alap-27F-ELO-S07,AdóAlap ÁFA 27% Fizetendő Előleg - S45,1.0,0,,3-a
+alap-27F-EU-SZ-S18,alap-27F-EU-SZ-S18,AdóAlap ÁFA 27% F. Import Szolgáltatás (EU-s),1.0,0,,3-b
+alap-27F-EU-T-S14,alap-27F-EU-T-S14,AdóAlap ÁFA 27% F. EU Termék,1.0,0,,3-b
+alap-27F-FORDHUL-S29,alap-27F-FORDHUL-S29,AdóAlap ÁFA 27% F. Fordított Hulladék - S52,1.0,0,,3-a
+alap-27F-FORDING-S29,alap-27F-FORDING-S29,AdóAlap ÁFA 27% F. Fordított Ingatlan - S51,1.0,0,,3-a
+alap-27F-FORDSZOLG-S29-[S54],alap-27F-FORDSZOLG-S29-[S54],AdóAlap ÁFA 27% F. Fordított Szolgáltatás,1.0,0,,3-a
+alap-27F-IMP-SZ-S27,alap-27F-IMP-SZ-S27,AdóAlap ÁFA 27% F. Import Szolgáltatás (nem EU-s),1.0,0,,3-b
+alap-27F-IMP-T-ONA-S26,alap-27F-IMP-T-ONA-S26,AdóAlap ÁFA 27% F. termék import (önadozó),1.0,0,,3-c
+alap-27F-S07,alap-27F-S07,AdóAlap ÁFA 27% Fizetendő,1.0,0,,3-a
+alap-27L-EU-SZ-S67,alap-27L-EU-SZ-S67,AdóAlap ÁFA 27% L. Import Szolgáltatás (EU-s),1.0,0,,4-b
+alap-27L-EU-T-S69,alap-27L-EU-T-S69,AdóAlap ÁFA 27% L. EU-s Termék,1.0,0,,4-b
+alap-27L-TE-S66-[S77],alap-27L-TE-S66-[S77],AdóAlap ÁFA 27% Levonható TE – S77,1.0,0,,4-a
+alap-27L-EVA-S66-[S80],alap-27L-EVA-S66-[S80],AdóAlap ÁFA 27% Levonható EVA – S80,1.0,0,,4-a
+alap-27L-FORDHUL-S66,alap-27L-FORDHUL-S66,AdóAlap ÁFA 27% Levonható Fordított Hulladék,1.0,0,,4-a
+alap-27L-FORDING-S66,alap-27L-FORDING-S66,AdóAlap ÁFA 27% Levonható Fordított Ingatlan,1.0,0,,4-a
+alap-27L-FORDSZOLG-S66,alap-27L-FORDSZOLG-S66,AdóAlap ÁFA 27% Levonható Fordított Szolgáltatás,1.0,0,,4-a
+alap-27L-IMP-SZ-S67,alap-27L-IMP-SZ-S67,AdóAlap ÁFA 27% L. Import Szolgáltatás (nem EU-s),1.0,0,,4-c
+alap-27L-IMP-T-KIV-S70,alap-27L-IMP-T-KIV-S70,AdóAlap ÁFA 27% L. Import termék (Nem-EU) kivetett,1.0,0,,4-c
+alap-27L-IMP-T-ONA-S71,alap-27L-IMP-T-ONA-S71,AdóAlap ÁFA 27 % L. termék import (önadózó),1.0,0,,4-c
+alap-27L-S66,alap-27L-S66,AdóAlap ÁFA 27% Levonható,1.0,0,,4-a
+alap-27L-ARANY-S68,alap-27L-ARANY-S68,AdóAlap ÁFA 27 % levonható (arányosítás),1.0,0,,4-a
+alap-5F-ELO-S05,alap-5F-ELO-S05,AdóAlap ÁFA 5% Fizetendő Előleg - S45,1.0,0,,3-a
+alap-5F-EU-T-S12,alap-5F-EU-T-S12,AdóAlap ÁFA 5% F. EU Termék,1.0,0,,3-b
+alap-5F-IMP-T-ONA-S24,alap-5F-IMP-T-ONA-S24,AdóAlap ÁFA 5% F. termék import (önadozó),1.0,0,,3-c
+alap-5F-S05,alap-5F-S05,AdóAlap ÁFA 5% Fizetendő,1.0,0,,3-a
+alap-5L-ARANY-S68,alap-5L-ARANY-S68,AdóAlap ÁFA 5 % levonható (arányosítás),1.0,0,,4-a
+alap-5L-EU-T-S69,alap-5L-EU-T-S69,AdóAlap ÁFA 5% L. EU-s Termék,1.0,0,,4-b
+alap-5L-IMP-T-KIV-S70,alap-5L-IMP-T-KIV-S70,AdóAlap ÁFA 5% L. Import termék (Nem-EU) kivetett,1.0,0,,4-c
+alap-5L-IMP-T-ONA-S71,alap-5L-IMP-T-ONA-S71,AdóAlap ÁFA 5% L. termék import (önadózó),1.0,0,,4-c
+alap-5L-S64,alap-5L-S64,AdóAlap ÁFA 5% Levonható,1.0,0,,4-a

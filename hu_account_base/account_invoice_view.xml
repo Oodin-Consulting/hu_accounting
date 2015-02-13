@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+		<record model="ir.ui.view" id="invoice_form_cust_fulfillm_date">
+            <field name="name">account.invoice.cust.form.hu</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="model">account.invoice</field>
+            <field name="arch" type="xml">
+             <data>  
+             	<!-- <field name="state" position="before">
+             		<button name="invoice_final" string="Végleges számla" attrs="{'invisible':['|',('adv_inv','=',False),('state','not in',('open','paid'))]}"  groups="base.group_no_one"/>
+             	</field> -->                                       	
+                <xpath expr="//field[@name='date_invoice']" position="after" >
+                	<label for="tax_fulfillment_date"/>
+                    <div name="tax_fulfillment">
+                        <field name="tax_fulfillment_date" />                         
+                    </div>                	
+                </xpath> 
+                <field name="move_id" position="after">
+                    <field name="adv_inv" readonly="1"/>
+                </field>                               
+             </data>                                            
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="invoice_form_supp_fulfillm_date">
+            <field name="name">account.invoice.supp.form.hu</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="model">account.invoice</field>
+            <field name="arch" type="xml">
+             <data>     
+             	<!-- <field name="state" position="before">
+             		<button name="invoice_final" string="Végleges számla" attrs="{'invisible':['|',('adv_inv','=',False),('state','not in',('open','paid'))]}" groups="base.group_no_one"/>
+             	</field> -->                                       	
+                <xpath expr="//field[@name='date_invoice']" position="after" >
+                	<label for="tax_fulfillment_date"/>
+                    <div name="tax_fulfillment">
+                        <field name="tax_fulfillment_date" />                         
+                    </div>                	
+                </xpath> 
+                <field name="move_id" position="after">
+                    <field name="adv_inv" readonly="1"/>
+                </field>                               
+             </data>                                            
+            </field>
+        </record>
+        
+        <record id="invoice_tree" model="ir.ui.view">
+            <field name="name">account.invoice.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+            	<field name="date_due" position="before">
+            		<field name="tax_fulfillment_date"/>
+            	</field>                
+            </field>
+        </record>
+               
+		
+	</data>
+</openerp>

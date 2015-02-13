@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		
+		<record model="ir.ui.view" id="partner_form_hu_vat">
+            <field name="name">res.partner.form.hu</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+             <data>                                            	
+                <xpath expr="//field[@name='last_reconciliation_date']" position="after" >
+                	<label for="hu_vat"/>
+                    <div name="vat_info">
+                        <field name="hu_vat" placeholder="e.g. 12345678­-1-12" class="oe_inline"/>                         
+                    </div>                	
+                </xpath>      
+             </data>                                            
+            </field>
+        </record>
+		
+	</data>
+</openerp>

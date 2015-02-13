@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hu_account_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-28 05:18+0000\n"
+"PO-Revision-Date: 2015-01-28 05:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hu_account_base
+#: view:website:hu_account_base.hu_layout_footer
+msgid "- CUI:"
+msgstr ""
+
+#. module: hu_account_base
+#: view:website:hu_account_base.hu_layout_footer
+msgid "- E-mail:"
+msgstr "- E-mail:"
+
+#. module: hu_account_base
+#: view:website:hu_account_base.hu_layout_header02
+msgid ". Oldal"
+msgstr ". Oldal"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_account
+msgid "Account"
+msgstr "Számla"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_model_line
+msgid "Account Model Entries"
+msgstr "Főkönyvi számla modelltételek"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_voucher
+msgid "Accounting Voucher"
+msgstr "Könyvelési bizonylat"
+
+#. module: hu_account_base
+#: help:account.account,check_side:0
+msgid "Check that all postings on this account are done on credit or debit side only.\n"
+"This rule is not applied on year closing/opening periods.\n"
+""
+msgstr "Check that all postings on this account are done on credit or debit side only.\n"
+"This rule is not applied on year closing/opening periods.\n"
+""
+
+#. module: hu_account_base
+#: field:account.account,check_side:0
+msgid "Check/force side"
+msgstr "Check/force side"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_res_company
+msgid "Companies"
+msgstr "Vállalatok"
+
+#. module: hu_account_base
+#: selection:account.journal,posting_policy:0
+msgid "Contra (debit<->credit)"
+msgstr "Contra (debit<->credit)"
+
+#. module: hu_account_base
+#: selection:account.account,check_side:0
+msgid "Credit"
+msgstr "Credit"
+
+#. module: hu_account_base
+#: selection:account.account,check_side:0
+msgid "Debit"
+msgstr "Debit"
+
+#. module: hu_account_base
+#: field:account.invoice,adv_inv:0
+msgid "Előleg számla"
+msgstr "Előleg számla"
+
+#. module: hu_account_base
+#: field:res.partner,hu_vat:0
+msgid "HU TIN"
+msgstr "Magyar adószám"
+
+#. module: hu_account_base
+#: help:res.partner,hu_vat:0
+msgid "Hungarian Tax Identification Number."
+msgstr "Magyar belföldi adószám"
+
+#. module: hu_account_base
+#: constraint:account.move.line:0
+#: code:addons/hu_account_base/account.py:144
+#, python-format
+msgid "Invalid side for account."
+msgstr "Invalid side for account."
+
+#. module: hu_account_base
+#: constraint:account.move.line:0
+#: code:addons/hu_account_base/account.py:143
+#, python-format
+msgid "Invalid tax amount. Tax amount can be 0.00 or equal to (Credit + Debit)."
+msgstr "Invalid tax amount. Tax amount can be 0.00 or equal to (Credit + Debit)."
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_invoice
+msgid "Invoice"
+msgstr "Számla"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_invoice_refund
+msgid "Invoice Refund"
+msgstr "Visszatérítési számla"
+
+#. module: hu_account_base
+#: field:res.company,invoicing_address:0
+msgid "Invoicing address"
+msgstr "Invoicing address"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_journal
+msgid "Journal"
+msgstr "Napló"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_move_line
+msgid "Journal Items"
+msgstr "Könyvelési tételsorok"
+
+#. module: hu_account_base
+#: help:account.journal,refund_journal_id:0
+msgid "Journal for refunds/returns from this journal. Leave empty to use same journal for normal and refund/return postings."
+msgstr "Journal for refunds/returns from this journal. Leave empty to use same journal for normal and refund/return postings."
+
+#. module: hu_account_base
+#: model:product.template,name:hu_account_base.rounding_product_product_template
+msgid "Készpénzes kerekités 5ft-ra"
+msgstr "Készpénzes kerekités 5ft-ra"
+
+#. module: hu_account_base
+#: constraint:account.move.line:0
+#: code:addons/hu_account_base/account.py:142
+#, python-format
+msgid "Negative credit or debit amount is not allowed for \"contra\" journal policy."
+msgstr "Negative credit or debit amount is not allowed for \"contra\" journal policy."
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: hu_account_base
+#: field:account.journal,refund_journal_id:0
+msgid "Refund journal"
+msgstr "Refund journal"
+
+#. module: hu_account_base
+#: field:account.journal,cash_rounding:0
+msgid "Rounding to 5 HUF"
+msgstr "Rounding to 5 HUF"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Értékesítési Fizetési számla"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_sale_order
+msgid "Sales Order"
+msgstr "Vevői megrendelés"
+
+#. module: hu_account_base
+#: help:res.company,invoicing_address:0
+msgid "Show invoicing type contact address on invoice report"
+msgstr "Show invoicing type contact address on invoice report"
+
+#. module: hu_account_base
+#: view:website:hu_account_base.hu_layout_header02
+msgid "Sorszám:"
+msgstr "Sorszám:"
+
+#. module: hu_account_base
+#: selection:account.journal,posting_policy:0
+msgid "Storno (-)"
+msgstr "Storno (-)"
+
+#. module: hu_account_base
+#: help:account.journal,posting_policy:0
+msgid "Storno allows minus postings, Refunds are posted on the same joural/account * (-1).\n"
+"Contra doesn't allow negative posting. Refunds are posted by swaping credit and debit side."
+msgstr "Storno allows minus postings, Refunds are posted on the same joural/account * (-1).\n"
+"Contra doesn't allow negative posting. Refunds are posted by swaping credit and debit side."
+
+#. module: hu_account_base
+#: field:account.journal,posting_policy:0
+msgid "Storno or Contra"
+msgstr "Storno or Contra"
+
+#. module: hu_account_base
+#: field:account.invoice,original:0
+msgid "Számlakép másolat"
+msgstr "Számlakép másolat"
+
+#. module: hu_account_base
+#: view:website:hu_account_base.hu_layout_header
+msgid "Telefon:"
+msgstr "Telefon:"
+
+#. module: hu_account_base
+#: field:account.invoice,tax_fulfillment_date:0
+msgid "Teljesitési dátum"
+msgstr "Teljesitési dátum"
+
+#. module: hu_account_base
+#: model:ir.model,name:hu_account_base.model_account_voucher_line
+msgid "Voucher Lines"
+msgstr "Nyugtasorok"
+
+#. module: hu_account_base
+#: view:website:hu_account_base.hu_layout_footer
+msgid "Web:"
+msgstr "Web:"
+
+#. module: hu_account_base
+#: sql_constraint:account.model.line:0
+msgid "Wrong credit or debit value in accounting entry !"
+msgstr "Wrong credit or debit value in accounting entry !"
+
+#. module: hu_account_base
+#: sql_constraint:account.move.line:0
+msgid "Wrong credit or debit value in accounting entry! Either credit or debit must be 0.00."
+msgstr "Wrong credit or debit value in accounting entry! Either credit or debit must be 0.00."
+
+#. module: hu_account_base
+#: sql_constraint:account.model.line:0
+msgid "Wrong credit or debit value in model! Either credit or debit must be 0.00."
+msgstr "Wrong credit or debit value in model! Either credit or debit must be 0.00."

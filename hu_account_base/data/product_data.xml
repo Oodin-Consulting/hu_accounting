@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+		        
+        <!-- Default created products -->
+        <record id="sale.advance_product_0" model="product.product">
+            <field name="default_code">ELŐLEG</field>
+            <field name="supply_method">buy</field>
+            <field name="type">service</field>
+            <field eval="'make_to_stock'" name="procure_method"/>
+            <field eval="1" name="sale_ok"/>
+            <field eval="1" name="purchase_ok"/>
+            <field name="standard_price">0.0</field>            
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="name">Előleg</field>
+            <field name="property_account_expense" search="[('code','like','353')]" model="account.account"/>
+            <field name="property_account_income" search="[('code','like','453')]" model="account.account"/>
+        </record>
+        
+        <record id="rounding_product" model="product.product">
+            <field name="default_code">SZÁMÍTOTT KEREKITÉS</field>
+            <field name="supply_method">buy</field>
+            <field name="type">service</field>
+            <field eval="'make_to_stock'" name="procure_method"/>
+            <field eval="1" name="sale_ok"/>
+            <field eval="1" name="purchase_ok"/>
+            <field name="standard_price">0.0</field>            
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="name">Készpénzes kerekités 5ft-ra</field>
+            <field name="property_account_expense" search="[('code','like','8690')]" model="account.account"/>
+            <field name="property_account_income" search="[('code','like','9690')]" model="account.account"/>
+            <field name="taxes_id" >(6, 0, [])</field>
+            <field name="supplier_taxes_id" >(6, 0, [])</field>
+        </record>	
+        
+    </data>
+</openerp>

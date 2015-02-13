@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record model="account.account.template" id="chart_hu_root">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">/</field>
+            <field name="name">Főkönyv</field>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_1_4">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">1-4</field>
+            <field name="name">1-4 Mérleg számlák</field>
+            <field name="parent_id" ref="chart_hu_root"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+       <record model="account.account.template" id="chart_hu_1_3">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">1-3</field>
+            <field name="name">1-3 Fk számlák</field>
+            <field name="parent_id" ref="chart_hu_1_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_5_9">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">5-9</field>
+            <field name="name">5-9 Eredmény számlák</field>
+            <field name="parent_id" ref="chart_hu_root"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+       <record model="account.account.template" id="chart_hu_5_8">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">5-8</field>
+            <field name="name">5-8 Összesítő számlák</field>
+            <field name="parent_id" ref="chart_hu_5_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_1">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">1</field>
+            <field name="name">SZÁMLAOSZTÁLY: BEFEKTETETT ESZKÖZÖK</field>
+            <field name="parent_id" ref="chart_hu_1_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart__hu_11">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">11</field>
+            <field name="name">IMMATERIÁLIS JAVAK</field>
+            <field name="parent_id" ref="chart_hu_1"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_111">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">111000</field>
+            <field name="name">Alapítás-átszervezés aktivált értéke</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_112">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">112000</field>
+            <field name="name">Kísérleti fejlesztés aktivált értéke</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_113">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">113000</field>
+            <field name="name">Vagyoni értékű jogok</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_114">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">114000</field>
+            <field name="name">Szellemi termékek</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_115">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">115000</field>
+            <field name="name">Üzleti vagy cégérték</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_117">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">117000</field>
+            <field name="name">Immateriális javak értékhelyesbítése</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_118">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">118000</field>
+            <field name="name">Immateriális javak terven felüli értékcsökkenése és annak visszaírása</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_119">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">119000</field>
+            <field name="name">Immateriális javak terv szerinti értékcsökkenése</field>
+            <field name="parent_id" ref="chart__hu_11"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_12_16">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">12-16</field>
+            <field name="name">TÁRGYI ESZKÖZÖK</field>
+            <field name="parent_id" ref="chart_hu_1"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_12">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">12</field>
+            <field name="name">INGATLANOK ÉS KAPCSOLÓDÓ VAGYONI ÉRTÉKŰ JOGOK</field>
+            <field name="parent_id" ref="chart_hu_12_16"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_121">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">121000</field>
+            <field name="name">Ingatlanok és kapcsolódó vagyoni értékű jogok</field>
+            <field name="parent_id" ref="chart_hu_12"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_127">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">127000</field>
+            <field name="name">Ingatlanok értékhelyesbítése</field>
+            <field name="parent_id" ref="chart_hu_12"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_128">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">128000</field>
+            <field name="name">Ingatlanok terven felüli értékcsökkenése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_12"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_129">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">129000</field>
+            <field name="name">Ingatlanok terv szerinti értékcsökkenése</field>
+            <field name="parent_id" ref="chart_hu_12"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_13">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">13</field>
+            <field name="name">MŰSZAKI BERENDEZÉSEK, GÉPEK, JÁRMŰVEK</field>
+            <field name="parent_id" ref="chart_hu_12_16"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_131">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">131000</field>
+            <field name="name">Műszaki berendezések, gépek, járművek</field>
+            <field name="parent_id" ref="chart_hu_13"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_137">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">137000</field>
+            <field name="name">Műszaki berendezések, gépek, járművek értékhelyesbítése</field>
+            <field name="parent_id" ref="chart_hu_13"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_138">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">138000</field>
+            <field name="name">Műszaki berendezések, gépek, járművek terven felüli értékcsökkenése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_13"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_139">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">139000</field>
+            <field name="name">Műszaki berendezések, gépek, járművek terv szerinti értékcsökkenése</field>
+            <field name="parent_id" ref="chart_hu_13"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_14">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">14</field>
+            <field name="name">EGYÉB BERENDEZÉSEK, FELSZERELÉSEK, JÁRMŰVEK</field>
+            <field name="parent_id" ref="chart_hu_12_16"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_141">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">141000</field>
+            <field name="name">Egyéb berendezések, felszerelések, járművek</field>
+            <field name="parent_id" ref="chart_hu_14"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_147">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">147000</field>
+            <field name="name">Egyéb berendezések, felszerelések, járművek értékhelyesbítése</field>
+            <field name="parent_id" ref="chart_hu_14"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_148">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">148000</field>
+            <field name="name">Egyéb berendezések, felszerelések, járművek terven felüli értékcsökkenése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_14"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_149">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">149000</field>
+            <field name="name">Egyéb berendezések, felszerelések, járművek terv szerinti értékcsökkenése</field>
+            <field name="parent_id" ref="chart_hu_14"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_15">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">15</field>
+            <field name="name">TENYÉSZÁLLATOK</field>
+            <field name="parent_id" ref="chart_hu_12_16"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_151">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">151000</field>
+            <field name="name">Tenyészállatok</field>
+            <field name="parent_id" ref="chart_hu_15"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_157">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">157000</field>
+            <field name="name">Tenyészállatok értékhelyesbítése</field>
+            <field name="parent_id" ref="chart_hu_15"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_158">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">158000</field>
+            <field name="name">Tenyészállatok terven felüli értékcsökkenése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_15"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_159">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">159000</field>
+            <field name="name">Tenyészállatok terv szerinti értékcsökkenése</field>
+            <field name="parent_id" ref="chart_hu_15"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_16">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">16</field>
+            <field name="name">BERUHÁZÁSOK, FELÚJÍTÁSOK</field>
+            <field name="parent_id" ref="chart_hu_12_16"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_161">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">161000</field>
+            <field name="name">Befejezetlen beruházások</field>
+            <field name="parent_id" ref="chart_hu_16"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_162">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">162000</field>
+            <field name="name">Felújítások</field>
+            <field name="parent_id" ref="chart_hu_16"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_169">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">169000</field>
+            <field name="name">Beruházások terven felüli értékcsökkenése</field>
+            <field name="parent_id" ref="chart_hu_16"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_17">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">17</field>
+            <field name="name">TULAJDONOSI RÉSZESEDÉST JELENTŐ RÉSZESEDÉSEK (BEFEKTETÉSEK)</field>
+            <field name="parent_id" ref="chart_hu_1"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_171">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">171000</field>
+            <field name="name">Tartós részesedés kapcsolt vállalkozásban</field>
+            <field name="parent_id" ref="chart_hu_17"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_172">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">172000</field>
+            <field name="name">Egyéb tartós részesedés</field>
+            <field name="parent_id" ref="chart_hu_17"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_1717">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">171700</field>
+            <field name="name">Tartós részesedések értékhelyesbítése</field>
+            <field name="parent_id" ref="chart_hu_171"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_1719">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">171900</field>
+            <field name="name">Tartós részesedések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_171"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_18">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">18</field>
+            <field name="name">HITELVISZONYT MEGTESTESÍTŐ ÉRTÉKPAPÍROK</field>
+            <field name="parent_id" ref="chart_hu_1"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_181">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">181000</field>
+            <field name="name">Tartós hitelviszonyt megtestesítő értékpapír</field>
+            <field name="parent_id" ref="chart_hu_18"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_189">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">189000</field>
+            <field name="name">Értékpapírok értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_18"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_19">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">19</field>
+            <field name="name">TARTÓSAN ADOTT KÖLCSÖNÖK</field>
+            <field name="parent_id" ref="chart_hu_1"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_191">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">191000</field>
+            <field name="name">Tartósan adott kölcsönök kapcsolt vállalkozásban</field>
+            <field name="parent_id" ref="chart_hu_19"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_192">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">192000</field>
+            <field name="name">Tartósan adott kölcsönök, egyéb részesedési viszonyban álló vállalkozásban</field>
+            <field name="parent_id" ref="chart_hu_19"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_193">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">193000</field>
+            <field name="name">Egyéb tartósan adott kölcsönök</field>
+            <field name="parent_id" ref="chart_hu_19"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_1919">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">191900</field>
+            <field name="name">Tartósan adott kölcsönök kapcsolt vállalkozásban értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_19"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_2">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">2</field>
+            <field name="name">SZÁMLAOSZTÁLY: KÉSZLETEK</field>
+            <field name="parent_id" ref="chart_hu_1_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_21">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">21</field>
+            <field name="name">ANYAGOK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_211">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">211000</field>
+            <field name="name">Nyers- és alapanyagok</field>
+            <field name="parent_id" ref="chart_hu_21"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_218">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">218000</field>
+            <field name="name">Anyagok árkülönbözete</field>
+            <field name="parent_id" ref="chart_hu_21"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_219">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">219000</field>
+            <field name="name">Anyagok értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_21"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_23">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">23</field>
+            <field name="name">BEFEJEZETLEN TERMELÉS ÉS FÉLKÉSZ TERMÉKEK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_231">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">231000</field>
+            <field name="name">Befejezetlen termelés és félkész termékek</field>
+            <field name="parent_id" ref="chart_hu_23"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_238">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">238000</field>
+            <field name="name">Befejezetlen termelés és félkész termékek készletérték-különbözete</field>
+            <field name="parent_id" ref="chart_hu_23"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_239">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">239000</field>
+            <field name="name">Befejezetlen termelés és félkész termékek értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_23"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_24">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">24</field>
+            <field name="name">NÖVENDÉK-, HÍZÓ- ÉS EGYÉB ÁLLATOK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_241">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">241000</field>
+            <field name="name">Növendékállatok, Hízóállatok, Egyéb állatok</field>
+            <field name="parent_id" ref="chart_hu_24"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_248">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">248000</field>
+            <field name="name">Állatok készletérték-különbözete</field>
+            <field name="parent_id" ref="chart_hu_24"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_249">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">249000</field>
+            <field name="name">Állatok értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_24"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_25">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">25</field>
+            <field name="name">KÉSZTERMÉKEK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_251">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">251000</field>
+            <field name="name">Késztermék</field>
+            <field name="parent_id" ref="chart_hu_25"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_258">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">258000</field>
+            <field name="name">Késztermékek készletérték-különbözete</field>
+            <field name="parent_id" ref="chart_hu_25"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_259">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">259000</field>
+            <field name="name">Késztermékek értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_25"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_26">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">26</field>
+            <field name="name">ÁRUK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_261">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">261000</field>
+            <field name="name">Áruk beszerzési áron</field>
+            <field name="parent_id" ref="chart_hu_26"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_262">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">262000</field>
+            <field name="name">Áruk elszámoló áron</field>
+            <field name="parent_id" ref="chart_hu_26"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_263">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">263000</field>
+            <field name="name">Áruk árkülönbözete</field>
+            <field name="parent_id" ref="chart_hu_26"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_264">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">264000</field>
+            <field name="name">Áruk eladási áron</field>
+            <field name="parent_id" ref="chart_hu_26"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_265">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">265000</field>
+            <field name="name">Áruk árrése</field>
+            <field name="parent_id" ref="chart_hu_26"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_269">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">269000</field>
+            <field name="name">Kereskedelmi áruk értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_26"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_27">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">27</field>
+            <field name="name">KÖZVETÍTETT SZOLGÁLTATÁSOK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_271">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">271000</field>
+            <field name="name">Közvetített szolgáltatások</field>
+            <field name="parent_id" ref="chart_hu_27"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_279">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">279000</field>
+            <field name="name">Közvetített szolgáltatások értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_27"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_28">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">28</field>
+            <field name="name">BETÉTDÍJAS GÖNGYÖLEGEK</field>
+            <field name="parent_id" ref="chart_hu_2"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_281">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">281000</field>
+            <field name="name">Betétdíjas göngyöleg</field>
+            <field name="parent_id" ref="chart_hu_28"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_288">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">288000</field>
+            <field name="name">Betétdíjas göngyölegek árkülönbözete</field>
+            <field name="parent_id" ref="chart_hu_28"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_289">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">289000</field>
+            <field name="name">Betétdíjas göngyölegek értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_28"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_3">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">3</field>
+            <field name="name">SZÁMLAOSZTÁLY: ELHATÁROLÁSOK</field>
+            <field name="parent_id" ref="chart_hu_1_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_31">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">31</field>
+            <field name="name">KÖVETELÉSEK ÁRUSZÁLLÍTÁSBÓL ÉS SZOLGÁLTATÁSBÓL (VEVŐK)</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_311">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">311000</field>
+            <field name="name">Belföldi követelések</field>
+            <field name="parent_id" ref="chart_hu_31"/>
+            <field name="type">receivable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_315">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">315000</field>
+            <field name="name">Belföldi követelések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_31"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_316">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">316000</field>
+            <field name="name">Külföldi követelések</field>
+            <field name="parent_id" ref="chart_hu_31"/>
+            <field name="type">receivable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_319">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">319000</field>
+            <field name="name">Külföldi követelések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_31"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_32">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">32</field>
+            <field name="name">KÖVETELÉSEK KAPCSOLT VÁLLALKOZÁSSAL SZEMBEN</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_321">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">321000</field>
+            <field name="name">Követelések kapcsolt vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_32"/>
+            <field name="type">receivable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_325">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">325000</field>
+            <field name="name">Jegyzett, de még be nem fizetett tőke</field>
+            <field name="parent_id" ref="chart_hu_32"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_329">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">329000</field>
+            <field name="name">Kapcsolt vállalkozással szembeni követelések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_32"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_33">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">33</field>
+            <field name="name">KÖVETELÉSEK EGYÉB RÉSZESEDÉSI VISZONYBAN LÉVŐ VÁLLALKOZÁSSAL SZEMBEN</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_331">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">331000</field>
+            <field name="name">Követelések egyéb részesedési viszonyban lévő vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_33"/>
+            <field name="type">receivable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_339">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">339000</field>
+            <field name="name">Egyéb részesedési viszonyban lévő vállalkozással szembeni követelések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_33"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_34">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">34</field>
+            <field name="name">VÁLTÓKÖVETELÉSEK</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_341">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">341000</field>
+            <field name="name">Váltókövetelések</field>
+            <field name="parent_id" ref="chart_hu_34"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_349">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">349000</field>
+            <field name="name">Váltókövetelések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_34"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_35">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">35</field>
+            <field name="name">ADOTT ELŐLEGEK</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_351">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">351000</field>
+            <field name="name">Adott előlegek</field>
+            <field name="parent_id" ref="chart_hu_35"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_352">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">352000</field>
+            <field name="name">Beruházásokra adott előlegek</field>
+            <field name="parent_id" ref="chart_hu_35"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_353">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">353000</field>
+            <field name="name">Immateriális javakra adott előlegek</field>
+            <field name="parent_id" ref="chart_hu_35"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_359">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">359000</field>
+            <field name="name">Adott előlegek értékvesztése és visszaírása</field>
+            <field name="parent_id" ref="chart_hu_35"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_36">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">36</field>
+            <field name="name">EGYÉB KÖVETELÉSEK</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_361">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">361000</field>
+            <field name="name">Munkavállalókkal szembeni követelések</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_362">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">362000</field>
+            <field name="name">Költségvetési kiutalási igények</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_363">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">363000</field>
+            <field name="name">Költségvetési kiutalási igények teljesítése</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_364">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">364000</field>
+            <field name="name">Rövid lejáratú kölcsönadott pénzeszközök</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_365">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">365000</field>
+            <field name="name">Vásárolt és kapott követelések</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_366">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">366000</field>
+            <field name="name">Részesedésekkel, értékpapírokkal kapcsolatos követelések</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_367">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">367000</field>
+            <field name="name">Határidős, opciós és swap ügyletekkel kapcsolatos követelések</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_368">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">368000</field>
+            <field name="name">Különféle egyéb követelések</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_3685">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">368500</field>
+            <field name="name">Eltérő időszaki levonható áfa</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_369">
+            <field name="user_type" ref='account.data_account_type_receivable'/>
+            <field name="code">369000</field>
+            <field name="name">Egyéb követelések értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_36"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_37">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">37</field>
+            <field name="name">ÉRTÉKPAPÍROK</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_371">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">371000</field>
+            <field name="name">Részesedés kapcsolt vállalkozásban</field>
+            <field name="parent_id" ref="chart_hu_37"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_372">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">372000</field>
+            <field name="name">Egyéb részesedés</field>
+            <field name="parent_id" ref="chart_hu_37"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_373">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">373000</field>
+            <field name="name">Saját részvények, saját üzletrészek</field>
+            <field name="parent_id" ref="chart_hu_37"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_374">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">374000</field>
+            <field name="name">Forgatási célú hitelviszonyt megtestesítő értékpapírok</field>
+            <field name="parent_id" ref="chart_hu_37"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_3718">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">3718000</field>
+            <field name="name">Részesedés kapcsolt vállalkozásban értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_37"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_379">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">379000</field>
+            <field name="name">Értékpapír elszámolási számla</field>
+            <field name="parent_id" ref="chart_hu_37"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_38">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">38</field>
+            <field name="name">PÉNZESZKÖZÖK</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_381">
+            <field name="user_type" ref='account.data_account_type_cash'/>
+            <field name="code">381000</field>
+            <field name="name">Pénztár</field>
+            <field name="parent_id" ref="chart_hu_38"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_382">
+            <field name="user_type" ref='account.data_account_type_cash'/>
+            <field name="code">382000</field>
+            <field name="name">Valutapénztár</field>
+            <field name="parent_id" ref="chart_hu_38"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_384">
+            <field name="user_type" ref='account.data_account_type_bank'/>
+            <field name="code">3840</field>
+            <field name="name">Bank</field>
+            <field name="parent_id" ref="chart_hu_38"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_383">
+            <field name="user_type" ref='account.data_account_type_cash'/>
+            <field name="code">383000</field>
+            <field name="name">Csekkek</field>
+            <field name="parent_id" ref="chart_hu_384"/>
+            <field name="type">liquidity</field>
+            <field name="reconcile" eval='False'/>
+        </record>        
+        <!-- <record model="account.account.template" id="chart_hu_3841">
+            <field name="user_type" ref='account.data_account_type_bank'/>
+            <field name="code">384010</field>
+            <field name="name">Bank1</field>
+            <field name="parent_id" ref="chart_hu_384"/>
+            <field name="type">liquidity</field>
+            <field name="reconcile" eval='False'/>
+        </record> -->        
+        <record model="account.account.template" id="chart_hu_385">
+            <field name="user_type" ref='account.data_account_type_bank'/>
+            <field name="code">385000</field>
+            <field name="name">Elkülönített betétszámlák</field>
+            <field name="parent_id" ref="chart_hu_384"/>
+            <field name="type">liquidity</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_386">
+            <field name="user_type" ref='account.data_account_type_bank'/>
+            <field name="code">386000</field>
+            <field name="name">Bank Deviza</field>
+            <field name="parent_id" ref="chart_hu_38"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <!-- <record model="account.account.template" id="chart_hu_3861">
+            <field name="user_type" ref='account.data_account_type_bank'/>
+            <field name="code">386001</field>
+            <field name="name">Bank1</field>
+            <field name="parent_id" ref="chart_hu_386"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>   -->      
+        <record model="account.account.template" id="chart_hu_389">
+            <field name="user_type" ref='account.data_account_type_cash'/>
+            <field name="code">389000</field>
+            <field name="name">Átvezetési számlák</field>
+            <field name="parent_id" ref="chart_hu_38"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_39">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">39</field>
+            <field name="name">AKTÍV IDŐBELI ELHATÁROLÁSOK</field>
+            <field name="parent_id" ref="chart_hu_3"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_391">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">391000</field>
+            <field name="name">Bevételek aktív időbeli elhatárolása</field>
+            <field name="parent_id" ref="chart_hu_39"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_392">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">392000</field>
+            <field name="name">Költségek, ráfordítások aktív időbeli elhatárolása</field>
+            <field name="parent_id" ref="chart_hu_39"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_393">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">393000</field>
+            <field name="name">Halasztott ráfordítások</field>
+            <field name="parent_id" ref="chart_hu_39"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_399">
+            <field name="user_type" ref='account.data_account_type_asset'/>
+            <field name="code">399000</field>
+            <field name="name">A követelés-jellegû aktív időbeli elhatárolások értékvesztése és annak visszaírása</field>
+            <field name="parent_id" ref="chart_hu_39"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">4</field>
+            <field name="name">SZÁMLAOSZTÁLY: FORRÁSOK</field>
+            <field name="parent_id" ref="chart_hu_1_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_41">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">41</field>
+            <field name="name">SAJÁT TŐKE</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_411">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">411000</field>
+            <field name="name">Jegyzett tőke</field>
+            <field name="parent_id" ref="chart_hu_41"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_412">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">412000</field>
+            <field name="name">Tőketartalék</field>
+            <field name="parent_id" ref="chart_hu_41"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_413">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">413000</field>
+            <field name="name">Eredménytartalék</field>
+            <field name="parent_id" ref="chart_hu_41"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_414">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">414000</field>
+            <field name="name">Lekötött tartalék</field>
+            <field name="parent_id" ref="chart_hu_41"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_417">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">417000</field>
+            <field name="name">Értékelési tartalék</field>
+            <field name="parent_id" ref="chart_hu_41"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_419">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">419000</field>
+            <field name="name">Mérleg szerinti eredmény</field>
+            <field name="parent_id" ref="chart_hu_41"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_42">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">42</field>
+            <field name="name">CÉLTARTALÉKOK</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_421">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">421000</field>
+            <field name="name">Céltartalék a várható kötelezettségekre</field>
+            <field name="parent_id" ref="chart_hu_42"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_422">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">422000</field>
+            <field name="name">Céltartalék a jövőbeni költségekre</field>
+            <field name="parent_id" ref="chart_hu_42"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_424">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">424000</field>
+            <field name="name">Árfolyamveszteség időbeli elhatárolása alapján képzett céltartalék</field>
+            <field name="parent_id" ref="chart_hu_42"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_429">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">429000</field>
+            <field name="name">Egyéb céltartalék</field>
+            <field name="parent_id" ref="chart_hu_42"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_43">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">43</field>
+            <field name="name">HÁTRASOROLT KÖTELEZETTSÉGEK</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_431">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">431000</field>
+            <field name="name">Hátrasorolt kötelezettségek kapcsolt vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_43"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_432">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">432000</field>
+            <field name="name">Hátrasorolt kötelezettségek egyéb részesedési viszonyban lévő vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_43"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_433">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">433000</field>
+            <field name="name">Hátrasorolt kötelezettségek egyéb gazdálkodóval szemben</field>
+            <field name="parent_id" ref="chart_hu_43"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_44">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">44</field>
+            <field name="name">HOSSZÚ LEJÁRATÚ KÖTELEZETTSÉGEK</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_441">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">441000</field>
+            <field name="name">Hosszú lejáratra kapott kölcsönök</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_442">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">442000</field>
+            <field name="name">Átváltoztatható kötvények</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_443">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">443000</field>
+            <field name="name">Tartozások kötvénykibocsátásból</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_444">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">444000</field>
+            <field name="name">Beruházási és fejlesztési hitelek</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_445">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">445000</field>
+            <field name="name">Egyéb hosszú lejáratú hitelek</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_446">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">446000</field>
+            <field name="name">Tartós kötelezettségek kapcsolt vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_447">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">447000</field>
+            <field name="name">Tartós kötelezettségek egyéb részesedési viszonyban lévő vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_448">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">448000</field>
+            <field name="name">Pénzügyi lízing miatti kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_449">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">449000</field>
+            <field name="name">Egyéb hosszú lejáratú kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_44"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_45_47">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">45-47</field>
+            <field name="name">RÖVID LEJÁRATÚ KÖTELEZETTSÉGEK</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_451">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">451000</field>
+            <field name="name">Rövid lejáratú kölcsönök</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_452">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">452000</field>
+            <field name="name">Rövid lejáratú hitelek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_453">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">453000</field>
+            <field name="name">Vevőktől kapott előlegek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_454">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">454000</field>
+            <field name="name">Szállítók</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_456">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">456000</field>
+            <field name="name">Faktoring tartozások</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_457">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">457000</field>
+            <field name="name">Váltótartozások</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_458">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">458000</field>
+            <field name="name">Rövid lejáratú kötelezettségek kapcsolt vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_459">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">459000</field>
+            <field name="name">Rövid lejáratú kötelezettségek egyéb részesedési viszonyban lévő vállalkozással szemben</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_461">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">461000</field>
+            <field name="name">Társasági adó elszámolása</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_462">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">462000</field>
+            <field name="name">Személyi jövedelemadó elszámolása</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_463">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">463000</field>
+            <field name="name">Költségvetési befizetési kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_464">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">464000</field>
+            <field name="name">Költségvetési befizetési kötelezettségek teljesítése</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_466">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">466</field>
+            <field name="name">Előzetesen felszámított általános forgalmi adó</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4661">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">466100</field>
+            <field name="name">Levonható belföldi áfa</field>
+            <field name="parent_id" ref="chart_hu_466"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4662">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">466200</field>
+            <field name="name">Levonható közösségi beszerzés utáni Áfa</field>
+            <field name="parent_id" ref="chart_hu_466"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4664">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">466400</field>
+            <field name="name">Levonható import utáni ÁFA</field>
+            <field name="parent_id" ref="chart_hu_466"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4665">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">466500</field>
+            <field name="name">Levonható import szolgáltatás utáni ÁFA</field>
+            <field name="parent_id" ref="chart_hu_466"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>        
+
+        <record model="account.account.template" id="chart_hu_467">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">467000</field>
+            <field name="name">Fizetendő általános forgalmi adó</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4671">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">467100</field>
+            <field name="name">Fizetendő belföldi áfa</field>
+            <field name="parent_id" ref="chart_hu_467"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>        
+        <record model="account.account.template" id="chart_hu_4672">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">467200</field>
+            <field name="name">Fizetendő közösségi beszerzés utáni Áfa</field>
+            <field name="parent_id" ref="chart_hu_467"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>         
+        <record model="account.account.template" id="chart_hu_4674">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">467400</field>
+            <field name="name">Fizetendő import utáni ÁFA</field>
+            <field name="parent_id" ref="chart_hu_467"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>     
+        <record model="account.account.template" id="chart_hu_4675">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">467500</field>
+            <field name="name">Fizetendő Import szolgáltatás utáni ÁFA</field>
+            <field name="parent_id" ref="chart_hu_467"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>           
+        <record model="account.account.template" id="chart_hu_468">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">468000</field>
+            <field name="name">Általános forgalmi adó elszámolási számla</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_469">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">469000</field>
+            <field name="name">Helyi adók elszámolási számla</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_471">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">471000</field>
+            <field name="name">Jövedelemelszámolási számla</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_472">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">472000</field>
+            <field name="name">Fel nem vett járandóságok</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_473">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">473000</field>
+            <field name="name">Társadalombiztosítási kötelezettség</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">payable</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_474">
+            <field name="user_type" ref='account_type_tax'/>
+            <field name="code">474000</field>
+            <field name="name">Elkülönített alapokkal kapcsolatos fizetési kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_475">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">475000</field>
+            <field name="name">Vagyonkezelő szervezetekkel szembeni kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_476">
+            <field name="user_type" ref='account.data_account_type_payable'/>
+            <field name="code">476000</field>
+            <field name="name">Rövid lejáratú egyéb kötelezettségek munkavállalókkal és tagokkal szemben</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_477">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">477000</field>
+            <field name="name">Határidős, opciós és swap ügyletekkel kapcsolatos kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_478">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">478000</field>
+            <field name="name">Részesedésekkel, értékpapírokkal kapcsolatos kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_479">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">479000</field>
+            <field name="name">Különféle rövid lejáratú egyéb kötelezettségek</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_4792">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">479200</field>
+            <field name="name">Eltérő időszaki fizetendő áfa</field>
+            <field name="parent_id" ref="chart_hu_45_47"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_48">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">48</field>
+            <field name="name">PASSZÍV IDŐBELI ELHATÁROLÁSOK</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_481">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">481000</field>
+            <field name="name">Bevételek passzív időbeli elhatárolása</field>
+            <field name="parent_id" ref="chart_hu_48"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_482">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">482000</field>
+            <field name="name">Költségek, ráfordítások passzív időbeli elhatárolása</field>
+            <field name="parent_id" ref="chart_hu_48"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_483">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">483000</field>
+            <field name="name">Halasztott bevételek</field>
+            <field name="parent_id" ref="chart_hu_48"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='True'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_49">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">49</field>
+            <field name="name">ÉVI MÉRLEGSZÁMLÁK</field>
+            <field name="parent_id" ref="chart_hu_4"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_491">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">491000</field>
+            <field name="name">Nyitómérleg számla</field>
+            <field name="parent_id" ref="chart_hu_49"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_492">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">492000</field>
+            <field name="name">Zárómérleg számla</field>
+            <field name="parent_id" ref="chart_hu_49"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_493">
+            <field name="user_type" ref='account_type_equity'/>
+            <field name="code">493000</field>
+            <field name="name">Adózott eredmény elszámolása</field>
+            <field name="parent_id" ref="chart_hu_49"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_5">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">5</field>
+            <field name="name">SZÁMLAOSZTÁLY: KÖLTSÉGNEMEK</field>
+            <field name="parent_id" ref="chart_hu_5_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_51">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">51</field>
+            <field name="name">ANYAGKÖLTSÉG</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_513">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">513000</field>
+            <field name="name">Üzemanyag</field>
+            <field name="parent_id" ref="chart_hu_51"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_514">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">514000</field>
+            <field name="name">Egyéb Anyag</field>
+            <field name="parent_id" ref="chart_hu_51"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_52">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">52</field>
+            <field name="name">IGÉNYBEVETT SZOLGÁLTATÁSOK KÖLTSÉGEI</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_527">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">527000</field>
+            <field name="name">Posta, távközlési költség</field>
+            <field name="parent_id" ref="chart_hu_52"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_529">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">529000</field>
+            <field name="name">Egyéb igénybevett szolg.költsége</field>
+            <field name="parent_id" ref="chart_hu_52"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_53">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">53</field>
+            <field name="name">EGYÉB SZOLGÁLTATÁSOK KÖLTSÉGEI</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_532">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">532000</field>
+            <field name="name">Bankköltségek</field>
+            <field name="parent_id" ref="chart_hu_53"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_533">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">533000</field>
+            <field name="name">Biztosítási díjak</field>
+            <field name="parent_id" ref="chart_hu_53"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_54">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">54</field>
+            <field name="name">BÉRKÖLTSÉG</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_541">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">541000</field>
+            <field name="name">Alapbér</field>
+            <field name="parent_id" ref="chart_hu_54"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_542">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">542000</field>
+            <field name="name">Kiegészítő fizetések</field>
+            <field name="parent_id" ref="chart_hu_54"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_543">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">543000</field>
+            <field name="name">Egyéb bérek</field>
+            <field name="parent_id" ref="chart_hu_54"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_55">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">55</field>
+            <field name="name">SZEMÉLYI JELLEGŰ EGYÉB KIFIZETÉSEK</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_551">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">551000</field>
+            <field name="name">Betegszabadság</field>
+            <field name="parent_id" ref="chart_hu_55"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_5531">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">553100</field>
+            <field name="name">Reprezentációs költség</field>
+            <field name="parent_id" ref="chart_hu_55"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_5532">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">553200</field>
+            <field name="name">Egyéb személyi jellegű kifizetés</field>
+            <field name="parent_id" ref="chart_hu_55"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_5571">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">557100</field>
+            <field name="name">Természetbeni SZJA</field>
+            <field name="parent_id" ref="chart_hu_55"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_56">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">56</field>
+            <field name="name">BÉRJÁRULÉKOK</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_561">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">561000</field>
+            <field name="name">Nyugdíjbizt. Járulék</field>
+            <field name="parent_id" ref="chart_hu_56"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_562">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">562000</field>
+            <field name="name">Fogl. Egészségbizt. Járulék</field>
+            <field name="parent_id" ref="chart_hu_56"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_564">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">564000</field>
+            <field name="name">Szakképzési járulék</field>
+            <field name="parent_id" ref="chart_hu_56"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_57">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">57</field>
+            <field name="name">ÉRTÉKCSÖKKENÉSI LEÍRÁS</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_58">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">58</field>
+            <field name="name">AKTIVÁLT SAJÁT TELJESÍTMÉNYEK ÉRTÉKE</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_581">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">581000</field>
+            <field name="name">Saját termelésű készletek állományváltozása</field>
+            <field name="parent_id" ref="chart_hu_58"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_582">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">582000</field>
+            <field name="name">Saját előállítású eszközök aktivált értéke</field>
+            <field name="parent_id" ref="chart_hu_58"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_59">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">590000</field>
+            <field name="name">KÖLTSÉGNEM ÁTVEZETÉSI SZÁMLA (elsődleges költségnem-elszámolás esetén, kizárólag összköltség eljárással)</field>
+            <field name="parent_id" ref="chart_hu_5"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_8">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">8</field>
+            <field name="name">SZÁMLAOSZTÁLY: ÉRTÉKESÍTÉS ELSZÁMOLT ÖNKÖLTSÉGE ÉS RÁFORDÍTÁSOK</field>
+            <field name="parent_id" ref="chart_hu_5_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_81">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">81</field>
+            <field name="name">ANYAGJELLEGŰ RÁFORDITÁSOK</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_811">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">811000</field>
+            <field name="name">Anyagköltség</field>
+            <field name="parent_id" ref="chart_hu_81"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_812">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">812000</field>
+            <field name="name">Igénybe vett szolgáltatások értéke</field>
+            <field name="parent_id" ref="chart_hu_81"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_813">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">813000</field>
+            <field name="name">Egyéb szolgáltatások értéke</field>
+            <field name="parent_id" ref="chart_hu_81"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_814">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">814000</field>
+            <field name="name">Eladott áruk beszerzési értéke</field>
+            <field name="parent_id" ref="chart_hu_81"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_815">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">815000</field>
+            <field name="name">Eladott (közvetített) szolgáltatások értéke</field>
+            <field name="parent_id" ref="chart_hu_81"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_82">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">82</field>
+            <field name="name">SZEMÉLYI JELLEGŰ RÁFORDÍTÁSOK</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_821">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">821000</field>
+            <field name="name">Bérköltség</field>
+            <field name="parent_id" ref="chart_hu_82"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_822">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">822000</field>
+            <field name="name">Személyi jellegű egyéb kifizetések</field>
+            <field name="parent_id" ref="chart_hu_82"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_823">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">823000</field>
+            <field name="name">Bérjárulékok</field>
+            <field name="parent_id" ref="chart_hu_82"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_83">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">83</field>
+            <field name="name">ÉRTÉKCSÖKKENÉSI LEÍRÁS</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_86">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">86</field>
+            <field name="name">EGYÉB RÁFORDÍTÁSOK</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_861">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">861000</field>
+            <field name="name">Értékesített immateriális javak, tárgyi eszközök könyv szerinti értéke</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_862">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">862000</field>
+            <field name="name">Értékesített, átruházott (engedményezett) követelések könyv szerinti értéke</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_863">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">863000</field>
+            <field name="name">Mérleg fordulónap előtt bekövetkezett eseményeknek az üzleti évhez kapcsolódó ráfordításai</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_864">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">864000</field>
+            <field name="name">Utólag adott - közvetve kapcsolódó - pénzügyileg rendezett engedmény</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_865">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">865000</field>
+            <field name="name">Céltartalék képzése</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_866">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">866000</field>
+            <field name="name">Értékvesztés, terven felüli értékcsökkenés</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_867">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">867000</field>
+            <field name="name">Adók, illetékek, hozzájárulások</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_8671">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">867100</field>
+            <field name="name">Ktg-ek ellenérték arányában megosztott áfa</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_869">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">869000</field>
+            <field name="name">Különféle egyéb ráfordítások</field>
+            <field name="parent_id" ref="chart_hu_86"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_87">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">87</field>
+            <field name="name">PÉNZÜGYI MŐVELETEK RÁFORDÍTÁSAI</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_871">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">871000</field>
+            <field name="name">Befektetett pénzügyi eszközök árfolyamvesztesége</field>
+            <field name="parent_id" ref="chart_hu_87"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_872">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">872000</field>
+            <field name="name">Fizetendő kamatok és kamatjellegő ráfordítások</field>
+            <field name="parent_id" ref="chart_hu_87"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_874">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">874000</field>
+            <field name="name">Részesedések, értékpapírok, bankbetétek értékvesztése</field>
+            <field name="parent_id" ref="chart_hu_87"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_879">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">879000</field>
+            <field name="name">Egyéb pénzügyi ráfordítások</field>
+            <field name="parent_id" ref="chart_hu_87"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_88">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">88</field>
+            <field name="name">RENDKÍVÜLI RÁFORDÍTÁSOK</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_89">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">89</field>
+            <field name="name">NYERESÉGET TERHELŐ ADÓK</field>
+            <field name="parent_id" ref="chart_hu_8"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_891">
+            <field name="user_type" ref='account.data_account_type_expense'/>
+            <field name="code">891000</field>
+            <field name="name">Társasági adó</field>
+            <field name="parent_id" ref="chart_hu_89"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_9">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">9</field>
+            <field name="name">SZÁMLAOSZTÁLY: ÉRTÉKESÍTÉS ÁRBEVÉTELE ÉS BEVÉTELEK</field>
+            <field name="parent_id" ref="chart_hu_5_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_91">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">91</field>
+            <field name="name">BELFÖLDI ÉRTÉKESÍTÉS ÁRBEVÉTELE</field>
+            <field name="parent_id" ref="chart_hu_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_911">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">911000</field>
+            <field name="name">Alaptevékenység bevétele</field>
+            <field name="parent_id" ref="chart_hu_91"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_93">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">93</field>
+            <field name="name">EXPORTÉRTÉKESÍTÉS ÁRBEVÉTELE</field>
+            <field name="parent_id" ref="chart_hu_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_96">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">96</field>
+            <field name="name">EGYÉB BEVÉTELEK</field>
+            <field name="parent_id" ref="chart_hu_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_961">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">961000</field>
+            <field name="name">Értékesített immateriális javak, tárgyi eszközök bevétele</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_962">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">962000</field>
+            <field name="name">Értékesített, átruházott (engedményezett) követelések elismert értéke</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_963">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">963000</field>
+            <field name="name">A mérlegkészítés idõpontjáig pénzügyileg rendezett, az üzleti évhez kapcsolódó egyéb bevételek</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_964">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">964000</field>
+            <field name="name">Utólag kapott - közvetve kapcsolódó - pénzügyileg rendezett engedmény</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_965">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">965000</field>
+            <field name="name">Céltartalék felhasználása (csökkenése, megszőnése)</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_966">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">966000</field>
+            <field name="name">Visszaírt értékvesztés, terven felüli értékcsökkenés</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_967">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">967000</field>
+            <field name="name">Visszafizetési kötelezettség nélkül kapott támogatás, juttatás</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_968">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">968000</field>
+            <field name="name">Biztosító által visszaigazolt kártérítés összege</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_969">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">969000</field>
+            <field name="name">Különféle egyéb bevételek</field>
+            <field name="parent_id" ref="chart_hu_96"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_97">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">97</field>
+            <field name="name">PÉNZÜGYI MŰVELETEK BEVÉTELEI</field>
+            <field name="parent_id" ref="chart_hu_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_971">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">971000</field>
+            <field name="name">Kapott (járó) osztalék és részesedés</field>
+            <field name="parent_id" ref="chart_hu_97"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_972">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">972000</field>
+            <field name="name">Részesedések értékesítésének árfolyamnyeresége</field>
+            <field name="parent_id" ref="chart_hu_97"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_973">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">973000</field>
+            <field name="name">Befektetett pénzügyi eszközök kamatai, árfolyamnyeresége</field>
+            <field name="parent_id" ref="chart_hu_97"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_974">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">974000</field>
+            <field name="name">Egyéb kapott (járó) kamatok és kamatjellegű bevételek</field>
+            <field name="parent_id" ref="chart_hu_97"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_975">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">975000</field>
+            <field name="name">Forgóeszközök között kimutatott befektetés, értékpapír értékesítésének, beváltásának árfolyamnyeresége</field>
+            <field name="parent_id" ref="chart_hu_97"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_979">
+            <field name="user_type" ref='account.data_account_type_income'/>
+            <field name="code">979000</field>
+            <field name="name">Egyéb pénzügyi bevételek</field>
+            <field name="parent_id" ref="chart_hu_97"/>
+            <field name="type">other</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+        <record model="account.account.template" id="chart_hu_98">
+            <field name="user_type" ref='account.data_account_type_view'/>
+            <field name="code">98</field>
+            <field name="name">RENDKÍVÜLI BEVÉTELEK</field>
+            <field name="parent_id" ref="chart_hu_9"/>
+            <field name="type">view</field>
+            <field name="reconcile" eval='False'/>
+        </record>
+
+    </data>
+</openerp>

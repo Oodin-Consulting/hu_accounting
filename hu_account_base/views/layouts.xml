@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+	
+<template id="hu_layout_02">    
+    <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id"></t>
+    </t>
+    <t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"></t>
+    </t>
+	<t t-if="'out' in o.type">
+	    <t t-call="hu_account_base.hu_layout_header02" />
+	    <t t-raw="0" />
+	    <t t-call="hu_account_base.hu_layout_footer02" />
+	</t>	
+</template>
+
+<template id="hu_layout_header02">
+    <div class="header" >
+    	<div class="row" >
+    		<div class="col-xs-4 col-xs-offset-6 text-right" >
+    			<strong>
+    			   <span>Sorszám: </span>
+    			   <span t-field="o.number" style="font-size: 120%;background-color: #F7F8E0"/>
+    			</strong>    			    			
+    		</div>    		
+    		<div class="col-xs-2 text-right" >
+    			<t><span class="page"/>/<span class="topage"/>. Oldal</t>
+    		</div>
+    	</div>    
+    </div>
+</template>
+
+<template id="hu_layout_footer02">
+    <div class="footer">    	
+    	<div>    		
+    	</div>
+    </div>
+</template>
+
+<template id="hu_layout_01">    
+    <t t-if="o and 'company_id' in o">
+        <t t-set="company" t-value="o.company_id"></t>
+    </t>
+    <t t-if="not o or not 'company_id' in o">
+        <t t-set="company" t-value="res_company"></t>
+    </t>
+
+    <t t-call="hu_account_base.hu_layout_header" />
+    <t t-raw="0" />
+    <t t-call="hu_account_base.hu_layout_footer" />
+</template>
+
+<template id="hu_layout_header">
+    <div class="header" >
+        <div class="row">
+            <div class="col-xs-3">
+                <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height: 45px;"/>
+            </div>
+            <div class="col-xs-9 text-right" style="margin-top:20px;" t-field="company.rml_header1"/>
+        </div>
+        <div class="row zero_min_height">
+            <div class="col-xs-12">
+                <div style="border-bottom: 1px solid CornflowerBlue;"></div>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-xs-4">
+            	<div style="font-size: 120%" >
+                	<strong><span t-field="company.name"/></strong>
+                </div>                	
+                <div t-field="company.street"/>
+                <t><span t-field="company.city"/> <span t-field="company.state_id.code"/> <span t-field="company.zip"/></t>                
+                <div t-field="company.country_id.name"/>
+                <div style="border-bottom: 1px solid CornflowerBlue;">Telefon: <span t-field="company.phone"/></div>                
+            </div>
+        </div>       
+    </div>
+</template>
+
+<template id="hu_layout_footer">
+    <div class="footer">
+        <div style="border-top: 1px solid CornflowerBlue;">
+        	<div t-if="not company.custom_footer" style="line-height:15px;" >
+        		<div class="col-xs-10 col-xs-offset-0"> 
+		            <div  class="row">
+		                <!-- <t >Banca: 
+		                  <t t-if="len(company.bank_ids)>0">
+		                	<span t-field="company.bank_ids[0].journal_id.name"/>
+		                 	(<span t-field="company.bank_ids[0].journal_id.currency or company.currency_id.name"/>)	                  
+		                    <t t-if="len(company.bank_ids)>1">,	 
+		                 	  <span t-field="company.bank_ids[1].journal_id.name"/> 
+		                 	  (<span t-field="company.bank_ids[1].journal_id.currency or company.currency_id.name"/>)
+		                    </t>
+		                	 - SWIFT: <span t-field="company.bank_ids[0].bank_bic"/>
+		                  </t>
+		                </t> -->
+		                <t >Web: <span t-field="company.website"/></t>
+		                <t > - E-mail: <span t-field="company.email"/></t>
+		                <t > - CUI: <span t-field="company.partner_id.vat"/></t>
+		                <!-- <t > - NRC: <span t-field="company.partner_id.nrc"/></t> -->
+		                
+		                						                
+		            </div>		            
+	            </div>
+	            <div class="col-xs-offset-11" >
+	            	<t ><span class="page"/>/<span class="topage"/></t>
+	            </div>
+			</div>
+            <t t-if="company.custom_footer">            	
+                <span t-raw="company.rml_footer"/>
+                <li><span class="page"/> / <span class="topage"/></li>
+            </t>            
+        </div>
+    </div>      
+</template>
+
+</data>
+</openerp>
