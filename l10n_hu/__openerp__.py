@@ -14,13 +14,17 @@
     "author" : "OODIN Consulting",
     "website": "",
     "category" : "Localization/Account Charts",
-    "sequence": 1,
+    "sequence": 16,
     "depends" : [ 'base_vat', 'base_iban', 'account', ],
     "description": """
 HU Localization and Accounting
 ------------------------------
 
-* 
+* Chart of accounts for Hungary
+* Taxes, Tax-Codes, Fiscal Positions, Journals
+* List of Countys 
+* Bank list from Hungarian National Bank 
+* Several settings: currency, rounding  
 			
     """,    
     "data" : [

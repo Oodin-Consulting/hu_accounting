@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    Module: account_storno
-#    Author: Goran Kliska
-#    mail:   gkliskaATgmail.com
-#    Copyright (C) 2011- Slobodni programi d.o.o., Zagreb
-#    Contributions: 
+#    Author:  Tatár Attila <atta@nvm.ro>
+#    Copyright (C) 2014-2015 Tatár Attila
+#    based on module: account_storno
+#                     Author: Goran Kliska
+#                     mail:   gkliskaATgmail.com
+#                     Copyright (C) 2011- Slobodni programi d.o.o., Zagreb 
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,12 +22,6 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-#import time
-#from openerp.osv import fields, osv
-#from openerp import models, fields, api, _
-#from openerp.exceptions import except_orm, Warning, RedirectWarning
-#import openerp.addons.decimal_precision as dp
-
 from openerp import models, api
 from openerp.osv import fields
 

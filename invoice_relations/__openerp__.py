@@ -11,14 +11,14 @@
 #"""
 {
     "name" : "Linked Invoices",
-    "version" : "*0.1 for v8",
+    "version" : "*0.6 for v8",
     "author" : "Tatár Attila",
     "website": "",
     "category" : "Accounting & Finance",
     "depends" : [ 'account'                                                
                 ],
     "description": """
-Relation between several invoices: Storno, Advance, ... 
+Relations between several invoices: Storno, Advance, ... 
     """,    
     "data" : [
               'security/ir.model.access.csv',

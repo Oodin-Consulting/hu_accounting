@@ -11,10 +11,6 @@ from openerp.osv import fields, osv
 from openerp.tools.translate import _
 from openerp.exceptions import  Warning
 
-import logging
-
-_logger = logging.getLogger(__name__)
-
 class account_invoice(models.Model):
     """ Extending invoice object """
     
