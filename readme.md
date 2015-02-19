@@ -1,9 +1,6 @@
 Hungarian accounting modules:
 =============================
 
-l10n_hu
--------
-
 hu_account_base
 ---------------
 
